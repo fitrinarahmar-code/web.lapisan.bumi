@@ -1,0 +1,699 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Nunito, sans-serif;
+    color: #164675;
+    background: linear-gradient(#55c7f8 0 30%, #fff7df 30% 75%, #a8df79 75%);
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.topbar {
+    max-width: 1400px;
+    margin: 12px auto 0;
+    padding: 8px 22px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: #fff8e8;
+    border: 5px solid #fff;
+    border-radius: 55px;
+    box-shadow: 0 5px 0 #8bc9e5;
+    position: relative;
+    z-index: 5;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #0873c3;
+    font: 800 24px 'Baloo 2';
+    line-height: .8;
+}
+
+.brand img {
+    width: 57px;
+    height: 57px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.brand b {
+    color: #ef7827;
+}
+
+.topbar nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.nav-btn {
+    border: 0;
+    border-radius: 28px;
+    background: #fff0d4;
+    padding: 9px 18px;
+    color: #70401f;
+    font-weight: 900;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: .2s;
+}
+
+.nav-btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #0878d1;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.sound-btn {
+    width: 54px;
+    height: 54px;
+    border: 3px solid #8bd6ff;
+    border-radius: 50%;
+    background: #159ce8;
+    display: grid;
+    place-items: center;
+}
+
+.sound-btn img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.hero {
+    max-width: 1400px;
+    height: 310px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 50% 100%, #f5ffbc 0 10%, transparent 50%);
+}
+
+.hero:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: linear-gradient(0deg, #7bc84f, #b6e86e);
+    border-radius: 50% 50% 0 0;
+}
+
+.hero-center {
+    z-index: 2;
+    text-align: center;
+    margin-top: -12px;
+}
+
+.hero-center h1 {
+    font: 800 clamp(48px, 6vw, 76px)/.95 'Baloo 2';
+    color: #fff;
+    margin: 0 0 12px;
+    text-shadow: 4px 5px #1766b3, -2px -2px #1766b3, 2px -2px #1766b3, -2px 2px #1766b3;
+}
+
+.hero-center h1 em {
+    font-style: normal;
+    color: #ff8b32;
+}
+
+.ribbon {
+    display: inline-block;
+    background: #ffdb68;
+    border: 3px solid #f4a62f;
+    border-radius: 12px 30px;
+    padding: 8px 28px;
+    color: #673b18;
+    font-size: 20px;
+    font-weight: 1000;
+    transform: rotate(-1deg);
+}
+
+.hero-center p {
+    background: #087fd0;
+    color: #fff;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: 900;
+    margin: 9px auto;
+    width: max-content;
+    max-width: 100%;
+}
+
+.main-btn {
+    border: 3px solid #fff;
+    border-radius: 28px;
+    background: linear-gradient(#39b3ff, #0871c9);
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: 1000;
+    font-size: 15px;
+    box-shadow: 0 4px 0 #075397;
+}
+
+.hero-boy,
+.hero-girl {
+    position: absolute;
+    z-index: 1;
+    object-fit: contain;
+    bottom: 0;
+}
+
+.hero-boy {
+    left: 0;
+    width: 28%;
+    height: 285px;
+    object-position: left bottom;
+}
+
+.hero-girl {
+    right: 0;
+    width: 26%;
+    height: 275px;
+    object-position: right bottom;
+}
+
+.hero-earth {
+    position: absolute;
+    right: 7%;
+    top: 15px;
+    width: 250px;
+    height: 230px;
+    object-fit: contain;
+    opacity: .92;
+}
+
+.section-heading {
+    width: max-content;
+    max-width: 90%;
+    margin: 0 auto 12px;
+    position: relative;
+    z-index: 2;
+    padding: 6px 55px;
+    background: linear-gradient(#ffdb9c, #d89a52);
+    border: 5px solid #fff1d7;
+    border-radius: 16px;
+    color: #633513;
+    font: 800 28px 'Baloo 2';
+    box-shadow: 0 5px 0 #b66e32;
+    text-align: center;
+}
+
+.layers {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 18px 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.layer-card {
+    height: 235px;
+    border: 4px solid white;
+    border-radius: 25px;
+    padding: 10px 12px;
+    text-align: center;
+    box-shadow: 0 5px 0 #7096a5;
+    overflow: hidden;
+}
+
+.layer-card h3 {
+    font: 800 25px 'Baloo 2';
+    margin: 0 0 3px;
+}
+
+.layer-card img {
+    display: block;
+    width: 100%;
+    height: 128px;
+    object-fit: contain;
+    margin: 0 auto 4px;
+}
+
+.layer-card button,
+.feature button {
+    border: 3px solid white;
+    border-radius: 25px;
+    color: white;
+    padding: 7px 17px;
+    font-weight: 1000;
+    box-shadow: 0 3px 0 #526c84;
+}
+
+.layer-card button b {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.crust {
+    background: #b9eaff;
+}
+
+.crust h3 {
+    color: #174e86;
+}
+
+.crust button {
+    background: #087bd3;
+}
+
+.mantle {
+    background: #ffe19a;
+}
+
+.mantle h3 {
+    color: #793c13;
+}
+
+.mantle button {
+    background: #ec741a;
+}
+
+.outer {
+    background: #d8f2a6;
+}
+
+.outer h3 {
+    color: #31702f;
+}
+
+.outer button {
+    background: #239b48;
+}
+
+.inner {
+    background: #ffd2df;
+}
+
+.inner h3 {
+    color: #9a3042;
+}
+
+.inner button {
+    background: #e73570;
+}
+
+.features {
+    max-width: 1400px;
+    margin: 0 auto 18px;
+    padding: 0 18px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.feature {
+    background: #fff;
+    border: 4px solid white;
+    border-radius: 24px;
+    min-height: 190px;
+    padding: 10px;
+    box-shadow: 0 5px 0 #6594a0;
+}
+
+.feature h2 {
+    margin: -18px 8px 10px;
+    padding: 7px 10px;
+    border-radius: 16px;
+    color: white;
+    text-align: center;
+    font: 800 22px 'Baloo 2';
+    box-shadow: 0 4px 0 #547c98;
+}
+
+.explore h2 {
+    background: #087bd3;
+}
+
+.games h2 {
+    background: #8050d3;
+}
+
+.quiz h2 {
+    background: #249c4d;
+}
+
+.profile h2 {
+    background: #ed791d;
+}
+
+.feature-body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-image {
+    width: 42%;
+    height: 120px;
+    object-fit: contain;
+}
+
+.explorer-image {
+    border-radius: 50%;
+}
+
+.feature p {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.3;
+    color: #173d67;
+}
+
+.feature button {
+    padding: 7px 12px;
+    font-size: 12px;
+    background: #087bd3;
+}
+
+.games button {
+    background: #8050d3;
+}
+
+.quiz button {
+    background: #249c4d;
+}
+
+.profile button {
+    background: #ed791d;
+}
+
+.globe-spin {
+    transition: transform 1s;
+}
+
+.globe-spin.spin {
+    transform: rotate(360deg);
+}
+
+.fact {
+    max-width: 1360px;
+    margin: 0 auto 20px;
+    padding: 12px 25px;
+    border: 4px solid white;
+    border-radius: 25px;
+    background: #fff0b3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 0 #c49b4b;
+}
+
+.fact h2 {
+    font: 800 24px 'Baloo 2';
+    margin: 0;
+    color: #88501f;
+}
+
+.fact p {
+    font-weight: 800;
+    margin: 4px 0;
+}
+
+.fact img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+}
+
+footer {
+    text-align: center;
+    background: #14549a;
+    color: #fff;
+    padding: 17px;
+    font-weight: 900;
+}
+
+footer span {
+    padding: 0 12px;
+    color: #ffdb68;
+}
+
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #10375dcc;
+    z-index: 20;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.modal-backdrop.show {
+    display: flex;
+}
+
+.modal {
+    position: relative;
+    background: #fff9e9;
+    border: 6px solid white;
+    border-radius: 28px;
+    box-shadow: 0 10px 0 #1766a2;
+    width: min(500px, 100%);
+    padding: 25px;
+    text-align: center;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.modal > img {
+    width: 115px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.modal h2 {
+    font: 800 27px 'Baloo 2';
+    color: #1269a8;
+    margin: 0;
+}
+
+.modal p {
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    border: 0;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background: #ffdae7;
+    color: #a21c51;
+    font-size: 25px;
+}
+
+.answers {
+    display: grid;
+    gap: 8px;
+}
+
+.answer {
+    border: 2px solid #acd9f2;
+    border-radius: 15px;
+    padding: 10px;
+    background: white;
+    color: #175184;
+    font-weight: 900;
+}
+
+.answer:hover {
+    background: #fff0b5;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .topbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 28px;
+    }
+
+    .topbar nav {
+        order: 3;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+
+    .hero-earth {
+        right: 1%;
+        width: 190px;
+    }
+
+    .hero-boy {
+        width: 25%;
+    }
+
+    .hero-girl {
+        width: 23%;
+    }
+
+    .layers,
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* HANDPHONE */
+@media (max-width: 600px) {
+    .topbar {
+        margin: 5px 8px;
+        padding: 8px;
+    }
+
+    .brand {
+        font-size: 19px;
+    }
+
+    .brand img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .topbar nav {
+        gap: 5px;
+    }
+
+    .nav-btn {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .nav-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sound-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .sound-btn img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero-center {
+        margin-top: -40px;
+    }
+
+    .hero-center h1 {
+        font-size: 43px;
+    }
+
+    .ribbon {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .hero-center p {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .hero-boy {
+        width: 35%;
+        height: 160px;
+        left: -15px;
+    }
+
+    .hero-girl {
+        width: 32%;
+        height: 155px;
+        right: -15px;
+    }
+
+    .hero-earth {
+        width: 110px;
+        height: 110px;
+        right: 0;
+        top: 5px;
+        opacity: .7;
+    }
+
+    .section-heading {
+        font-size: 21px;
+        padding: 5px 18px;
+    }
+
+    .layers,
+    .features {
+        grid-template-columns: 1fr;
+        padding: 0 12px;
+        gap: 12px;
+    }
+
+    .layer-card {
+        height: 220px;
+    }
+
+    .layer-card img {
+        height: 120px;
+    }
+
+    .features {
+        margin-top: 8px;
+    }
+
+    .feature {
+        min-height: 160px;
+    }
+
+    .feature-image {
+        height: 100px;
+    }
+
+    .fact {
+        margin: 0 12px 15px;
+    }
+
+    .fact img {
+        width: 75px;
+    }
+
+    .fact p {
+        font-size: 12px;
+    }
+}
